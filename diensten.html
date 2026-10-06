@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Diensten | NOVA Cleaning Services</title>
+
+  <meta name="description"
+    content="Bekijk alle schoonmaakdiensten van NOVA Cleaning Services voor kantoren en woningen in Noord-Brabant.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    .page-hero {
+      min-height: 500px;
+      background:
+        linear-gradient(90deg, rgba(4,18,31,.95), rgba(4,18,31,.55)),
+        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=2200&q=90")
+        center / cover;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+    }
+
+    .page-hero-content {
+      max-width: 750px;
+    }
+
+    .page-hero h1 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(50px, 7vw, 78px);
+      line-height: 1;
+      letter-spacing: -4px;
+      margin: 20px 0;
+    }
+
+    .page-hero h1 span {
+      color: var(--green);
+    }
+
+    .page-hero p {
+      max-width: 600px;
+      color: #d5e0e5;
+      font-size: 18px;
+    }
+
+    .services-page {
+      padding: 110px 0;
+    }
+
+    .service-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 480px;
+      margin-bottom: 35px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--light);
+    }
+
+    .service-detail:nth-child(even) {
+      direction: rtl;
+    }
+
+    .service-detail:nth-child(even) > * {
+      direction: ltr;
+    }
+
+    .service-detail-image {
+      min-height: 480px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .office-image {
+      background-image:
+        linear-gradient(rgba(7,28,45,.15),rgba(7,28,45,.15)),
+        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=90");
+    }
+
+    .window-image {
+      background-image:
+        linear-gradient(rgba(7,28,45,.1),rgba(7,28,45,.1)),
+        url("https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=90");
+    }
+
+    .home-image {
+      background-image:
+        linear-gradient(rgba(7,28,45,.1),rgba(7,28,45,.1)),
+        url("https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=90");
+    }
+
+    .deep-image {
+      background-image:
+        linear-gradient(rgba(7,28,45,.1),rgba(7,28,45,.1)),
+        url("https://images.unsplash.com/photo-1581579185169-4c6c3f7f4f70?auto=format&fit=crop&w=1200&q=90");
+    }
+
+    .service-detail-content {
+      padding: 65px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .service-detail-number {
+      color: var(--green-dark);
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .service-detail h2 {
+      margin: 0 0 20px;
+    }
+
+    .service-detail p {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 500px;
+    }
+
+    .service-list {
+      margin-top: 25px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .service-list div {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .service-list span {
+      color: var(--green-dark);
+      font-weight: 800;
+    }
+
+    .service-detail-button {
+      margin-top: 30px;
+      width: fit-content;
+    }
+
+    @media(max-width: 750px) {
+
+      .service-detail,
+      .service-detail:nth-child(even) {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+
+      .service-detail-image {
+        min-height: 300px;
+      }
+
+      .service-detail-content {
+        padding: 40px 28px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container nav">
+
+    <a href="index.html" class="logo">
+      <span class="logo-icon">N</span>
+      <span>NOVA<span class="green">.</span></span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="diensten.html">Diensten</a>
+      <a href="index.html#over-ons">Over ons</a>
+      <a href="index.html#werkgebied">Werkgebied</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <a href="index.html#offerte" class="nav-button">
+      Offerte aanvragen
+    </a>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+  <div class="container page-hero-content">
+
+    <div class="label">ONZE DIENSTEN</div>
+
+    <h1>
+      Schoonmaak voor
+      <span>elke situatie.</span>
+    </h1>
+
+    <p>
+      Van kantoren en bedrijfspanden tot woningen.
+      NOVA Cleaning Services zorgt voor een schone,
+      frisse en verzorgde omgeving.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services-page">
+
+  <div class="container">
+
+
+    <!-- KANTOOR -->
+
+    <article class="service-detail">
+
+      <div class="service-detail-image office-image"></div>
+
+      <div class="service-detail-content">
+
+        <div class="service-detail-number">01 — BEDRIJVEN</div>
+
+        <h2>
+          Kantoorschoonmaak
+        </h2>
+
+        <p>
+          Een schone werkplek draagt bij aan een prettige,
+          professionele en gezonde werkomgeving.
+          Wij zorgen ervoor dat uw kantoor er verzorgd uitziet.
+        </p>
+
+        <div class="service-list">
+
+          <div>
+            <span>✓</span>
+            Werkplekken en bureaus
+          </div>
+
+          <div>
+            <span>✓</span>
+            Keuken en gemeenschappelijke ruimtes
+          </div>
+
+          <div>
+            <span>✓</span>
+            Sanitaire ruimtes
+          </div>
+
+          <div>
+            <span>✓</span>
+            Stofzuigen en dweilen
+          </div>
+
+        </div>
+
+        <a href="index.html#offerte"
+           class="button primary service-detail-button">
+          Offerte aanvragen →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- RAMEN -->
+
+    <article class="service-detail">
+
+      <div class="service-detail-image window-image"></div>
+
+      <div class="service-detail-content">
+
+        <div class="service-detail-number">02 — RAMEN</div>
+
+        <h2>
+          Glasbewassing
+        </h2>
+
+        <p>
+          Schone ramen geven uw woning of bedrijfspand
+          direct een frisse en professionele uitstraling.
+        </p>
+
+        <div class="service-list">
+
+          <div>
+            <span>✓</span>
+            Ramen binnen en buiten
+          </div>
+
+          <div>
+            <span>✓</span>
+            Glas en kozijnen
+          </div>
+
+          <div>
+            <span>✓</span>
+            Periodieke glasbewassing
+          </div>
+
+          <div>
+            <span>✓</span>
+            Particulieren en bedrijven
+          </div>
+
+        </div>
+
+        <a href="index.html#offerte"
+           class="button primary service-detail-button">
+          Offerte aanvragen →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- WONING -->
+
+    <article class="service-detail">
+
+      <div class="service-detail-image home-image"></div>
+
+      <div class="service-detail-content">
+
+        <div class="service-detail-number">03 — PARTICULIEREN</div>
+
+        <h2>
+          Woning schoonmaak
+        </h2>
+
+        <p>
+          Geen tijd voor het schoonmaken van uw woning?
+          Wij nemen het werk uit handen en zorgen voor
+          een frisse en aangename leefomgeving.
+        </p>
+
+        <div class="service-list">
+
+          <div>
+            <span>✓</span>
+            Woningen en appartementen
+          </div>
+
+          <div>
+            <span>✓</span>
+            Keuken en badkamer
+          </div>
+
+          <div>
+            <span>✓</span>
+            Stofzuigen en dweilen
+          </div>
+
+          <div>
+            <span>✓</span>
+            Eenmalig of periodiek
+          </div>
+
+        </div>
+
+        <a href="index.html#offerte"
+           class="button primary service-detail-button">
+          Offerte aanvragen →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- DIEPTEREINIGING -->
+
+    <article class="service-detail">
+
+      <div class="service-detail-image deep-image"></div>
+
+      <div class="service-detail-content">
+
+        <div class="service-detail-number">04 — GRONDIG</div>
+
+        <h2>
+          Dieptereiniging
+        </h2>
+
+        <p>
+          Voor ruimtes die extra aandacht nodig hebben.
+          Onze dieptereiniging gaat verder dan de dagelijkse
+          schoonmaak.
+        </p>
+
+        <div class="service-list">
+
+          <div>
+            <span>✓</span>
+            Grondige reiniging
+          </div>
+
+          <div>
+            <span>✓</span>
+            Keuken en sanitaire ruimtes
+          </div>
+
+          <div>
+            <span>✓</span>
+            Moeilijk bereikbare plaatsen
+          </div>
+
+          <div>
+            <span>✓</span>
+            Eenmalige reiniging mogelijk
+          </div>
+
+        </div>
+
+        <a href="index.html#offerte"
+           class="button primary service-detail-button">
+          Offerte aanvragen →
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <div class="container cta-box">
+
+    <div>
+
+      <div class="label">VRIJBLIJVENDE OFFERTE</div>
+
+      <h2>
+        Uw schoonmaak,
+        <span>onze zorg.</span>
+      </h2>
+
+      <p>
+        Neem vandaag nog contact met ons op.
+      </p>
+
+    </div>
+
+    <a href="index.html#contact"
+       class="button dark-button">
+      Neem contact op →
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+
+      <a href="index.html" class="logo">
+        <span class="logo-icon">N</span>
+        <span>NOVA<span class="green">.</span></span>
+      </a>
+
+      <p>
+        Professionele schoonmaak voor woningen
+        en bedrijven in Noord-Brabant.
+      </p>
+
+    </div>
+
+    <div>
+      <h4>Navigatie</h4>
+      <a href="index.html">Home</a>
+      <a href="diensten.html">Diensten</a>
+      <a href="index.html#over-ons">Over ons</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div>
+      <h4>Diensten</h4>
+      <a href="#">Kantoorschoonmaak</a>
+      <a href="#">Glasbewassing</a>
+      <a href="#">Woning schoonmaak</a>
+      <a href="#">Dieptereiniging</a>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:+31600000000">06 00 00 00 00</a>
+      <a href="mailto:info@novacleaning.nl">
+        info@novacleaning.nl
+      </a>
+      <span>Noord-Brabant, Nederland</span>
+    </div>
+
+  </div>
+
+  <div class="container copyright">
+    © 2026 NOVA Cleaning Services. Alle rechten voorbehouden.
+  </div>
+
+</footer>
+
+</body>
+</html>

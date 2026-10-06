@@ -1,9 +1,10 @@
-const menuBtn = document.getElementById("menuBtn");
+const menuButton = document.getElementById("menuButton");
 const mobileMenu = document.getElementById("mobileMenu");
 
-menuBtn.addEventListener("click", () => {
+menuButton.addEventListener("click", () => {
   mobileMenu.classList.toggle("active");
 });
+
 
 document.querySelectorAll(".mobile-menu a").forEach(link => {
   link.addEventListener("click", () => {
@@ -13,14 +14,14 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
 
 
 const form = document.getElementById("contactForm");
-const message = document.getElementById("formMessage");
+const formMessage = document.getElementById("formMessage");
 
 form.addEventListener("submit", function(event) {
 
   event.preventDefault();
 
-  message.textContent =
-    "Bedankt! Uw aanvraag is ontvangen. We nemen zo snel mogelijk contact met u op.";
+  formMessage.textContent =
+    "Bedankt! We nemen zo snel mogelijk contact met u op.";
 
   form.reset();
 

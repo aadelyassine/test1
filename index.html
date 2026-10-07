@@ -448,35 +448,39 @@
     </div>
 
 
-    <form class="contact-form" id="contactForm">
+   <form class="contact-form" id="contactForm"
+      action="https://api.web3forms.com/submit"
+      method="POST">
 
-      <input type="text" placeholder="Uw naam" required>
+  <input type="hidden" name="access_key" value="1313f81d-950f-40bd-8a52-743f231d2437">
 
-      <input type="email" placeholder="Uw e-mailadres" required>
+  <input type="text" name="name" placeholder="Uw naam" required>
 
-      <input type="tel" placeholder="Uw telefoonnummer">
+  <input type="email" name="email" placeholder="Uw e-mailadres" required>
 
-      <select required>
-        <option value="">Welke dienst zoekt u?</option>
-        <option>Kantoorschoonmaak</option>
-        <option>Glasbewassing</option>
-        <option>Woning schoonmaak</option>
-        <option>Dieptereiniging</option>
-        <option>Anders</option>
-      </select>
+  <input type="tel" name="phone" placeholder="Uw telefoonnummer">
 
-      <textarea
-        rows="5"
-        placeholder="Vertel ons kort wat u nodig heeft...">
-      </textarea>
+  <select name="dienst" required>
+    <option value="">Welke dienst zoekt u?</option>
+    <option>Kantoorschoonmaak</option>
+    <option>Glasbewassing</option>
+    <option>Woning schoonmaak</option>
+    <option>Dieptereiniging</option>
+    <option>Anders</option>
+  </select>
 
-      <button class="button primary" type="submit">
-        Verstuur aanvraag →
-      </button>
+  <textarea
+    name="bericht"
+    rows="5"
+    placeholder="Vertel ons kort wat u nodig heeft..."></textarea>
 
-      <div id="formMessage"></div>
+  <button class="button primary" type="submit">
+    Verstuur aanvraag →
+  </button>
 
-    </form>
+  <div id="formMessage"></div>
+
+</form>
 
   </div>
 

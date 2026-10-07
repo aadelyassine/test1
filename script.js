@@ -16,13 +16,41 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
 const form = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", async function(event) {
 
   event.preventDefault();
 
-  formMessage.textContent =
-    "Bedankt! We nemen zo snel mogelijk contact met u op.";
+  const formData = new FormData(form);
 
-  form.reset();
+  try {
+
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        "Accept": "application/json"
+      }
+    });
+
+    if (response.ok) {
+
+      formMessage.textContent =
+        "Bedankt! We nemen zo snel mogelijk contact met u op.";
+
+      form.reset();
+
+    } else {
+
+      formMessage.textContent =
+        "Er is iets misgegaan. Probeer het opnieuw.";
+
+    }
+
+  } catch (error) {
+
+    formMessage.textContent =
+      "Er is iets misgegaan. Probeer het opnieuw.";
+
+  }
 
 });
